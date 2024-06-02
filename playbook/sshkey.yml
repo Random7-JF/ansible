@@ -1,7 +1,6 @@
 ---
-- name: Playbook to manage SSH keys
+- name: Add SSH Key
   hosts: ubuntu
-    
   tasks:
     - name: Move SSH public key over to server
       authorized_key:

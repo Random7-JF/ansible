@@ -1,0 +1,17 @@
+---
+- name: Stage Server with Updates, SSH and Qemu-Guest-Agent
+  hosts: newdeploy
+  become: yes
+  tasks:
+    - name: Update all packages
+      apt:
+        update_cache: yes
+        upgrade: yes
+    - name: Install Qemu-Guest-Agent
+      apt:
+        update_cache: no
+        name: qemu-guest-agent
+    - name: Transfer SSH Key
+      authorized_key:
+        user: random
+        key: "{{ lookup('file', '/home/random/.ssh/prox.pub') }}"

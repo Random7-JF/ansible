@@ -1,4 +1,5 @@
-- name: Update repositories cache and install "qemu-guest-agent"
+---
+- name: Update repositories cache and install qemu-guest-agent
   hosts: ubuntucloud,ubuntu
   become: yes
   tasks:
