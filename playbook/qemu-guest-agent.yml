@@ -1,0 +1,8 @@
+- name: Update repositories cache and install "qemu-guest-agent"
+  hosts: ubuntucloud,ubuntu
+  become: yes
+  tasks:
+    - name: Install Package
+      apt:
+        name: qemu-guest-agent
+        update_cache: yes

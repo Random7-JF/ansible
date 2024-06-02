@@ -1,0 +1,10 @@
+---
+- name: Playbook to manage SSH keys
+  hosts: ubuntu
+    
+  tasks:
+    - name: Move SSH public key over to server
+      authorized_key:
+        user: random
+        key: "{{ lookup('file', '/home/random/.ssh/prox.pub') }}"
+

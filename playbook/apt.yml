@@ -1,0 +1,8 @@
+- name: Update all packages to their latest version
+  hosts: "ubuntucloud,ubuntu"
+  become: yes
+  tasks:
+    - name: apt
+      apt:
+        update_cache: yes
+        upgrade: "yes"
