@@ -1,9 +1,8 @@
-# Makefile
-venv: ## create virtual environment if venv is not present
+venv:
     python3 -m venv .venv
-	
+
+source: 
+	source .venv/bin/active
+
 req:
 	pip install -r requirements.txt
-
-source: ## source the venv
-	source .venv/bin/active
