@@ -1,0 +1,14 @@
+---
+- name: Cisco Banner
+  hosts: ios
+  gather_facts: false
+
+  tasks:
+  - name: Apply Banner
+    cisco.ios.ios_banner:
+      banner: login
+      text: |
+        this is my login banner
+        that contains a multiline
+        string
+      state: present
