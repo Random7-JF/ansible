@@ -8,6 +8,6 @@
     ios_banner:
       banner: login
       text: |
-        Nicolas Cage is the
-        Tiger King
+        RandomNet
+        Cisco 1111
       state: present

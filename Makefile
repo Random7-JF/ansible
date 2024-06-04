@@ -1,8 +1,8 @@
 venv:
-    python3 -m venv .venv
+	python3 -m venv .venv
 
 source: 
-	source .venv/bin/active
+	source .venv/bin/activate
 
 req:
 	pip install -r requirements.txt
