@@ -1,6 +1,6 @@
 ---
 - name: Update all packages to their latest version
-  hosts: ubuntucloud,ubuntu
+  hosts: ubuntucloud:ubuntu
   become: yes
   tasks:
     - name: apt

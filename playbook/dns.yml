@@ -1,0 +1,13 @@
+---
+- name: Install and configure vm for Pihole
+  hosts: dns
+  become: yes
+  tasks:
+    - name: Update
+      apt:
+        update_cache: yes
+        upgrade: yes
+    - name: Install Qemu Package
+      apt:
+        name: qemu-guest-agent
+        update_cache: yes

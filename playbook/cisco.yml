@@ -1,6 +1,6 @@
 ---
 - name: Cisco Banner
-  hosts: ios
+  hosts: cisco
   gather_facts: false
 
   tasks:
